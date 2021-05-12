@@ -2,92 +2,90 @@ import java.util.Scanner;
 
 public class Homework {
     public static void main(String[] args) {
-        String hoTen;
-        int namSinh;
-        String gioiTinh;
-        int chieuCao;
-        int canNang;
-        // "13\ \t  14\thiennguyen\1998\nam\175\65
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Hay nhap xau ki tu: ");
+//        String a = sc.next();
+//        int num = a.length();
+//        char[] arr = new char[a.length()];
+//
+//        for (int i = 0; i < num; i++) {
+//            arr[i] = a.charAt(i);
+//        }
+//
+//        // duyet tung phan tu // 10
+//        for (int i = 0; i < num; i++) {
+//            int count = 0;
+//            // tim xem trong mang phan tu day xuat hien bao nhieu lan
+//            for (int j = 0; j < num; j++) {
+//                if (arr[i] == arr[j]) {
+//                    count++;
+//                }
+//            }
+//            System.out.println("" + arr[i] + ": " + count);
+//        }
+//
+//        // 1 2 3 1 2 2 3 1 2  character: ascii 2 => 256 kys tuwj =>
+//        // 100 * 100 = 10.000
+//        // index: 0 1 2 3
+//        // value: 0 2 3 1
+//        int[] counts = new int[256]; // 0 - 256
+//
+//        // 100
+//        for (int i = 0; i < num; i++) {
+//            int index = (int) arr[i];
+//            System.out.print(index+",");
+//            counts[index] = counts[index] + 1;
+//        }
+//        // 256
+//        for (int i = 0; i < 256; i++) {
+//            if(counts[i]!=0){
+//                System.out.println(counts[i]);
+//            }
+//        }
+
+        boolean check = true;
         Scanner sc = new Scanner(System.in);
-        // inputstream
-        // "1\n2\n 3 \n 4 \n 5 \n 6 \n 7 \n "
-        // [1,\n,2,\n]
-        // 12 13 14 \n
-        // [12,13,14,]
-        // thien nguyen\n
+        System.out.print("Nhap vao xau ki tu : ");
+        String a = sc.next();
+        int l = a.length();
+        char[] arr = new char[l];
 
-        // outputstream
+        for (int i = 0; i < l; i++) {
+            arr[i] = a.charAt(i);
+        }
+        // "abccba"
+        // "abccba"
 
-        int aa, bb;
-        aa = sc.nextInt();
-        bb = sc.nextInt();
-        sc.nextLine();
-        // fflush()
-        System.out.println("Nhap vao ho ten:");
-        hoTen = sc.next();
+        // "abcdcba"
+        // "abcdcba"
 
-        System.out.println("Nhap vao nam sinh:");
-        namSinh = sc.nextInt();
+        int i = 0;
+        int L2 = l/2;
+        boolean check_true = true;
 
-        System.out.println("Nhap vao gioi tinh");
-        gioiTinh = sc.next();
-
-        System.out.println("Nhap vao chieu cao");
-        chieuCao = sc.nextInt();
-
-        System.out.println("Nhap vao can nang");
-        canNang = sc.nextInt();
-
-        System.out.println(hoTen);
-        System.out.println(namSinh);
-        System.out.println(gioiTinh);
-        System.out.println(chieuCao);
-        System.out.println(canNang);
-
-
-
-
-
-
-        double a,b,c;
-        double x1,x2;
-
-
-
-        System.out.println("Nhap vao a: ");
-        a = sc.nextDouble();
-        System.out.println("Nhap vao b: ");
-        b = sc.nextDouble();
-        System.out.println("Nhap vao c: ");
-        c = sc.nextDouble();
-
-        if(a==0){
-            if(b==0){
-                if(c==0){ // 0x2 + 0x + 0 = 0
-                    System.out.println("PT Vo so nghiem");
-                } else { // 0x2 + 0x + 3 = 0
-                    System.out.println("PT Vo nghiem");
-                }
-            } else {
-                System.out.println("PT co 1 nghiem: ");
-                System.out.println(-c/b);
-            }
-        } else {
-            double delta = b*b - 4*a*c;
-            if(delta==0){
-                System.out.println("Phuong trinh co nghiem kep: ");
-                System.out.println(-b/2/a);
-//                System.out.println(-b/(2*a));
-            } else if(delta>0){
-                System.out.println("PT co hai nghiem");
-                x1 = (-b-Math.sqrt(delta))/(2*a);
-                x2 = (-b+Math.sqrt(delta))/(2*a);
-                System.out.println(x1);
-                System.out.println(x2);
-            } else {
-                System.out.println("PT vo nghiem");
+        for (  ; i < L2; i++) {
+            if(arr[i]!=arr[l-i-1]){
+                break;
             }
         }
+
+        if(check_true){
+            System.out.println("palindrome");
+        } else {
+            System.out.println("not palindrome");
+        }
+        int status_code = 400;
+
+        if(status_code==400){
+
+        } else if(status_code==401){
+
+        } else if(status_code==404){
+
+        } else {
+
+        }
+
 
     }
 }
