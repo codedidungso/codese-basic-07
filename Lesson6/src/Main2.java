@@ -56,6 +56,7 @@ class SinhVien {
         System.out.println("MSSV: " + MSSV);
         System.out.println("Ten sinh vien: " + name);
         System.out.println("Dia chi: " + diachi);
+        System.
     }
 
     void nhapThongTin() {
