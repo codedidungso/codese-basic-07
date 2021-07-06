@@ -13,6 +13,7 @@ public abstract class Animal implements AnUong {
     void phuongthuc1(){
 
     }
+
     abstract void dichuyen(int x,int y);
 }
 
